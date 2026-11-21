@@ -1,0 +1,21 @@
+# Public file whitelist.
+/*
+!/.gitignore
+!/requirements.txt
+!/README.md
+!/src/
+/src/*
+!/src/data.py
+!/src/model.py
+!/src/train.py
+!/docs/
+/docs/*
+!/docs/training_curve.png
+!/docs/prediction_superres.png
+
+# Local guidance and runtime files.
+/[A]GENTS.md
+data/
+__pycache__/
+*.pyc
+*.pdf
