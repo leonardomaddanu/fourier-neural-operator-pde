@@ -18,8 +18,8 @@ interior faces and the local conductivity at outer Dirichlet faces.
 The matrix is assembled in CSC format and solved with `scipy.sparse.linalg.spsolve`
 in float64; datasets are stored in float32.
 
-Permeability comes from Fourier-filtered Gaussian noise with physical frequencies
-$k=2\pi\,\operatorname{fftfreq}(N,d=h)$ and filter
+Physical wavevectors are computed as
+`k = 2 * np.pi * np.fft.fftfreq(N, d=h)`.
 $\exp[-(k_x^2+k_y^2)/(2(6\pi)^2)]$. Each field is standardized, then mapped to
 $a=3+9/(1+\exp(-1.5g))\in(3,12)$. The physical bandwidth stays fixed; the
 finite-grid FFT period $N/(N+1)$ differs slightly between resolutions.
